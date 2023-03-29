@@ -7,15 +7,18 @@ import KeywordModal from "./components/KeywordModal";
 
 // main app
 function App(): JSX.Element {
+  // State variables to store extracted keywords, modal open status, and loading status
   const [keywords, setKeywords] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
 
+  // Function to extract keywords from input text using the OpenAI GPT-3 API
   async function extractKeywords(text: string): Promise<void> {
-    // console.log(text);
+    // Set loading state to true and open the modal
     setLoading(true);
     setIsOpen(true);
 
+    // Set up POST request to send input text to OpenAI API and receive extracted keywords in response
     const options = {
       method: "POST",
       headers: {
@@ -36,19 +39,19 @@ function App(): JSX.Element {
       }),
     };
 
+    // Send the request and parse the response
     const response = await fetch(import.meta.env.VITE_URL, options);
     const json = await response.json();
-
     const data = json.choices[0].text.trim();
 
-    console.log(data);
-
+    // Set the extracted keywords state variable, set loading state to false
     setKeywords(data);
     setLoading(false);
   }
 
+  // Function to close the modal
   function closeModal(): void {
-    return setIsOpen(false);
+    setIsOpen(false);
   }
 
   return (

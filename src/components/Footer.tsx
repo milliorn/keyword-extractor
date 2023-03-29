@@ -2,7 +2,7 @@ import { Box, Image, Text, Flex } from "@chakra-ui/react";
 import logo from "../assets/openai.png";
 import React from "react";
 
-// footer
+// Define the Footer component as a function that returns a JSX element
 function Footer(): JSX.Element {
   return (
     <Box marginTop={50}>

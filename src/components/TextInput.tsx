@@ -2,17 +2,20 @@ import { ChangeEvent, useState } from "react";
 import { Textarea, Button, useToast } from "@chakra-ui/react";
 import React from "react";
 
-// text input
+// component for text input and submit button
 function TextInput({
   extractKeywords,
 }: {
   extractKeywords: (text: string) => void;
 }): JSX.Element {
+  // state to hold text entered in textarea
   const [text, setText] = useState<string>("");
 
+  // hook to display toast messages
   const toast = useToast();
 
   function submitText(): void {
+    // if text field is empty, show error message
     if (text === "") {
       toast({
         title: "Text field is empty",
@@ -22,15 +25,14 @@ function TextInput({
         isClosable: false,
       });
     } else {
-      {
-        extractKeywords(text);
-      }
-      text;
+      // call the function passed down from parent to extract keywords from the text
+      extractKeywords(text);
     }
   }
 
   return (
     <>
+      {/* textarea for entering text */}
       <Textarea
         bg="blue.400"
         padding={4}
@@ -43,6 +45,7 @@ function TextInput({
         }
       />
 
+      {/* button to trigger keyword extraction */}
       <Button
         bg="blue.500"
         color="white"

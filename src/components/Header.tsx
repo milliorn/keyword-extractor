@@ -2,10 +2,11 @@ import { Heading, Image, Text } from "@chakra-ui/react";
 import logo from "../assets/light-bulb.svg";
 import React from "react";
 
+// define Header component
 function Header(): JSX.Element {
   return (
     <>
-      <Image src={logo as string} alt="logo" width={100} marginBottom="1rem" />
+      <Image src={logo} alt="logo" width={100} marginBottom="1rem" />
       <Heading color="white" marginBottom="1rem">
         AI Keyword Extractor
       </Heading>

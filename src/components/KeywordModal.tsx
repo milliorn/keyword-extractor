@@ -12,8 +12,19 @@ import {
   CircularProgress,
 } from "@chakra-ui/react";
 
-// modal top output results
-function KeywordModal({ keywords, loading, isOpen, closeModal }): JSX.Element {
+// Component to display keywords in a modal
+function KeywordModal({
+  keywords,
+  loading,
+  isOpen,
+  closeModal,
+}: {
+  keywords: string;
+  loading: boolean;
+  isOpen: boolean;
+  closeModal: () => void;
+}): JSX.Element {
+  // Render the modal with the keywords and loading spinner
   return (
     <>
       <Modal isOpen={isOpen} onClose={closeModal}>
