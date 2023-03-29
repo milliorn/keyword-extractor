@@ -38,7 +38,12 @@ function App(): JSX.Element {
     const response = await fetch(import.meta.env.VITE_URL, options);
     const json = await response.json();
 
-    const data = json.choicees[0].text.trim();
+    const data = json.choices[0].text.trim();
+
+    console.log(data);
+
+    setKeywords(data);
+    setLoading(false);
   }
 
   return (
