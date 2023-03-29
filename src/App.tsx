@@ -36,6 +36,7 @@ function App(): JSX.Element {
     };
 
     const response = await fetch(import.meta.env.VITE_URL, options);
+    const json = await response.json();
   }
 
   return (
