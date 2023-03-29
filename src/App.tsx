@@ -24,7 +24,14 @@ function App(): JSX.Element {
       body: JSON.stringify({
         model: "text-davinci-003",
         prompt:
-          "Extract keywords from this text. Make the first letter of each word uppercase and separate with commas.",
+          "Extract keywords from this text. Make the first letter of every word uppercase and separate with commas:\n\n" +
+          text +
+          "",
+        temperature: 0.5,
+        max_tokens: 60,
+        top_p: 1.0,
+        frequency_penalty: 0.8,
+        presence_penalty: 0.0,
       }),
     };
   }
