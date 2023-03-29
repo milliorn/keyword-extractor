@@ -5,6 +5,7 @@ import TextInput from "./components/TextInput";
 import React, { useState } from "react";
 import KeywordModal from "./components/KeywordModal";
 
+// main app
 function App(): JSX.Element {
   // State variables to store extracted keywords, modal open status, and loading status
   const [keywords, setKeywords] = useState<string>("");
