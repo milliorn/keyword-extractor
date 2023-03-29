@@ -2,9 +2,7 @@
 function App(): JSX.Element {
 
   return (
-    <div className="">
-      
-    </div>
+<><h1>App</h1></>
   )
 }
 
