@@ -10,7 +10,7 @@ function App(): JSX.Element {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
 
-  function extractKeywords(text: string): void {
+  async function extractKeywords(text: string): Promise<void> {
     // console.log(text);
     setLoading(true);
     setIsOpen(true);
@@ -34,6 +34,8 @@ function App(): JSX.Element {
         presence_penalty: 0.0,
       }),
     };
+
+    const response = await fetch(import.meta.env.VITE_URL, options);
   }
 
   return (
