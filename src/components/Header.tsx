@@ -2,6 +2,7 @@ import { Heading, Image, Text } from "@chakra-ui/react";
 import logo from "../assets/light-bulb.svg";
 import React from "react";
 
+// define Header component
 function Header(): JSX.Element {
   return (
     <>
