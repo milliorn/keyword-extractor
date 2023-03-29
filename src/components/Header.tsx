@@ -5,7 +5,7 @@ import React from "react";
 function Header(): JSX.Element {
   return (
     <>
-      <Image src={logo as string} alt="logo" width={100} marginBottom="1rem" />
+      <Image src={logo} alt="logo" width={100} marginBottom="1rem" />
       <Heading color="white" marginBottom="1rem">
         AI Keyword Extractor
       </Heading>

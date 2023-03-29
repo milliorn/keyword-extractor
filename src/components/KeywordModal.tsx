@@ -13,7 +13,17 @@ import {
 } from "@chakra-ui/react";
 
 // modal top output results
-function KeywordModal({ keywords, loading, isOpen, closeModal }): JSX.Element {
+function KeywordModal({
+  keywords,
+  loading,
+  isOpen,
+  closeModal,
+}: {
+  keywords: string;
+  loading: boolean;
+  isOpen: boolean;
+  closeModal: () => void;
+}): JSX.Element {
   return (
     <>
       <Modal isOpen={isOpen} onClose={closeModal}>
