@@ -39,3 +39,5 @@ function KeywordModal({ keywords, loading, isOpen, closeModal }): JSX.Element {
     </>
   );
 }
+
+export default KeywordModal;
