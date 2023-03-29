@@ -1,4 +1,4 @@
-# vite-starter
+# keyword-extractor
 
 This starter includes `Typescript`
 
