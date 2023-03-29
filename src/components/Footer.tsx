@@ -7,7 +7,10 @@ function Footer(): JSX.Element {
     <Box marginTop={50}>
       <Flex justifyContent="center" alignItems="center">
         <Image src={logo} marginRight={1} />
-        <Text>Powered by OpenAI</Text>
+        <Text>
+          Powered by <a href="https://openai.com/">OpenAI</a> and{" "}
+          <a href="https://chakra-ui.com/">Chakra-UI</a>
+        </Text>
       </Flex>
     </Box>
   );
