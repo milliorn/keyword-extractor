@@ -19,19 +19,25 @@ To get started with Keyword Extractor, follow these steps:
 
 ## Usage
 
+## Preview
+
+![Preview](public/preview.png)
+
 ### Development Server
 
 To run the application on a development server, use the following command:
+
 ```bash
 npm run dev
 ```
 
-This will start the development server at `http://localhost:3000/`. 
+This will start the development server at `http://localhost:3000/`.
 Open this URL in your browser to access the Keyword Extractor application.
 
 ### Production Build
 
 To build the application for production, use the following command:
+
 ```bash
 npm run build
 ```
@@ -41,10 +47,10 @@ This will create an optimized production build in the `dist` directory.
 ### Preview
 
 To preview the production build locally, use the following command:
+
 ```bash
 npm run preview
 ```
-
 
 This will serve the production build locally at `http://localhost:5000/`.
 
